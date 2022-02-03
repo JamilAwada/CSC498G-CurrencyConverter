@@ -64,13 +64,13 @@ public class MainActivity extends AppCompatActivity {
             if (from.equals("USD") && to.equals("LBP")){
                 converted = amountEntered * usdValue;
                 DecimalFormat df = new DecimalFormat("#");
-                df.setMaximumFractionDigits(8);
+                df.setMaximumFractionDigits(2);
                 result.setText(df.format(converted) + " LBP");
             }
             else if (from.equals("LBP") && to.equals("USD")){
                 converted = amountEntered / usdValue;
                 DecimalFormat df = new DecimalFormat("#");
-                df.setMaximumFractionDigits(8);
+                df.setMaximumFractionDigits(2);
                 result.setText(df.format(converted) + " USD");
             }
             else {
