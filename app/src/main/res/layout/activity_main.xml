@@ -127,6 +127,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_corner"
         android:fontFamily="sans-serif"
+        android:onClick="convert"
         android:text="@string/convert"
         android:textColor="#FFFF"
         android:textSize="20sp"
