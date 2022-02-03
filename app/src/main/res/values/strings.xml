@@ -9,6 +9,9 @@
     <string name="exchange_rate">Exchange rate:</string>
     <string name="_1_22000_lbp">$1 = 22000 LBP</string>
     <string name="amount">Amount</string>
+    <string name="_1_22000">1 = 22000</string>
+    <string name="icon_of_the_lebanese_pound">Icon of the lebanese pound</string>
+    <string name="icon_of_the_u_s_dollar">Icon of the U.S dollar</string>
 
     // This string array stores the currencies used in the spinners
     <string-array name="currencies">

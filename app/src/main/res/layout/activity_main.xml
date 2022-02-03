@@ -105,7 +105,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.349"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck"
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/tv_convertto"
@@ -153,7 +154,7 @@
         android:id="@+id/tv_dollarvalue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/_1_22000_lbp"
+        android:text="@string/_1_22000"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -178,6 +179,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.844"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck"
+        android:importantForAutofill="no" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="@string/icon_of_the_lebanese_pound"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.701"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.259"
+        app:srcCompat="@drawable/lbp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="@string/icon_of_the_u_s_dollar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.303"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.259"
+        app:srcCompat="@drawable/nicepng_dollar_logo_png_2546303" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
