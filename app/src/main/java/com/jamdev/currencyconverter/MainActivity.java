@@ -40,8 +40,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void convert(View view){
 
+        // Wiping previous result in the case of same currency conflict or empty amount
+        result.setText("");
+
+        // Final result
         double converted;
+
+        // Fixed exchange rate
         int usdValue = 22000;
+
+        // Checking if the user has input an amount
         if (tv.getText().toString().isEmpty()){
             Toast.makeText(getApplicationContext(), "Empty field.", Toast.LENGTH_LONG).show();
         }
@@ -52,20 +60,18 @@ public class MainActivity extends AppCompatActivity {
             String from = sp1.getSelectedItem().toString();
             String to = sp2.getSelectedItem().toString();
 
-
-
             // Checking for different scenarios and applying the correct protocol for each
             if (from.equals("USD") && to.equals("LBP")){
                 converted = amountEntered * usdValue;
-                DecimalFormat df = new DecimalFormat("#.###");
-                double roundedConversion = Double.valueOf(df.format(converted));
-                result.setText(roundedConversion + " LBP");
+                DecimalFormat df = new DecimalFormat("#");
+                df.setMaximumFractionDigits(8);
+                result.setText(df.format(converted) + " LBP");
             }
             else if (from.equals("LBP") && to.equals("USD")){
                 converted = amountEntered / usdValue;
-                DecimalFormat df = new DecimalFormat("#.###");
-                double roundedConversion = Double.valueOf(df.format(converted));
-                result.setText(roundedConversion + " USD");
+                DecimalFormat df = new DecimalFormat("#");
+                df.setMaximumFractionDigits(8);
+                result.setText(df.format(converted) + " USD");
             }
             else {
                 Toast.makeText(getApplicationContext(), "Cannot converted to and from the same currency.", Toast.LENGTH_LONG).show();
