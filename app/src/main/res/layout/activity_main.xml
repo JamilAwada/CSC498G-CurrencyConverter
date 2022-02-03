@@ -7,24 +7,26 @@
     tools:context=".MainActivity">
 
     <Spinner
-        android:id="@+id/currencySpinner2"
+        android:id="@+id/spinner_currency2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:entries="@array/currencies"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.548"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.55" />
+        app:layout_constraintVertical_bias="0.55"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
-        android:id="@+id/mainLogo2"
+        android:id="@+id/tv_mainlogo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_corner"
         android:fontFamily="sans-serif-light"
-        android:text="Converter"
+        android:text="@string/converter"
         android:textColor="#FFFF"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,12 +37,12 @@
         app:layout_constraintVertical_bias="0.103" />
 
     <TextView
-        android:id="@+id/mainLogo1"
+        android:id="@+id/tv_mainlogo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_corner"
         android:fontFamily="sans-serif-light"
-        android:text="Currency"
+        android:text="@string/currency"
         android:textColor="#FFFF"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,10 +53,10 @@
         app:layout_constraintVertical_bias="0.037" />
 
     <TextView
-        android:id="@+id/selectCurrencyText"
+        android:id="@+id/tv_selectcurrency"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select currency:"
+        android:text="@string/select_currency"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,10 +66,11 @@
         app:layout_constraintVertical_bias="0.458" />
 
     <Spinner
-        android:id="@+id/currencySpinner1"
+        android:id="@+id/spinner_currency1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:entries="@array/currencies"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.548"
@@ -76,10 +79,10 @@
         app:layout_constraintVertical_bias="0.461" />
 
     <TextView
-        android:id="@+id/enterAmountText"
+        android:id="@+id/tv_enteramount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter amount:"
+        android:text="@string/enter_amount"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,24 +92,26 @@
         app:layout_constraintVertical_bias="0.356" />
 
     <EditText
-        android:id="@+id/amountInputField"
+        android:id="@+id/pt_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Amount"
+        android:hint="@string/amount"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.865"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349" />
+        app:layout_constraintVertical_bias="0.349"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
-        android:id="@+id/convertToText"
+        android:id="@+id/tv_convertto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Convert to:"
+        android:text="@string/convert_to"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,12 +121,12 @@
         app:layout_constraintVertical_bias="0.548" />
 
     <Button
-        android:id="@+id/convertButton"
+        android:id="@+id/btn_convert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_corner"
         android:fontFamily="sans-serif"
-        android:text="Convert"
+        android:text="@string/convert"
         android:textColor="#FFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -132,10 +137,10 @@
         app:layout_constraintVertical_bias="0.696" />
 
     <TextView
-        android:id="@+id/exchangeRateText"
+        android:id="@+id/tv_exchangerate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Exchange rate:"
+        android:text="@string/exchange_rate"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -145,10 +150,10 @@
         app:layout_constraintVertical_bias="0.198" />
 
     <TextView
-        android:id="@+id/dollarValueText"
+        android:id="@+id/tv_dollarvalue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="$1 = 22000 LBP"
+        android:text="@string/_1_22000_lbp"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -158,11 +163,10 @@
         app:layout_constraintVertical_bias="0.258" />
 
     <EditText
-        android:id="@+id/resultField"
+        android:id="@+id/num_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="false"
-        android:editable="false"
         android:ems="10"
         android:enabled="false"
         android:focusable="false"
@@ -173,6 +177,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.844" />
+        app:layout_constraintVertical_bias="0.844"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
