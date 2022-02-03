@@ -42,28 +42,36 @@ public class MainActivity extends AppCompatActivity {
 
         double converted;
         int usdValue = 22000;
-        double amountEntered = Double.parseDouble(tv.getText().toString());
-
-        // Retrieving the currencies selected
-        String from = sp1.getSelectedItem().toString();
-        String to = sp2.getSelectedItem().toString();
-
-        // Checking for different scenarios and applying the correct protocol for each
-        if (from.equals("USD") && to.equals("LBP")){
-            converted = amountEntered * usdValue;
-            DecimalFormat df = new DecimalFormat("#.###");
-            double roundedConversion = Double.valueOf(df.format(converted));
-            result.setText(roundedConversion + " LBP");
-        }
-        else if (from.equals("LBP") && to.equals("USD")){
-            converted = amountEntered / usdValue;
-            DecimalFormat df = new DecimalFormat("#.###");
-            double roundedConversion = Double.valueOf(df.format(converted));
-            result.setText(roundedConversion + " USD");
+        if (tv.getText().toString().isEmpty()){
+            Toast.makeText(getApplicationContext(), "Empty field.", Toast.LENGTH_LONG).show();
         }
         else {
-            Toast.makeText(getApplicationContext(), "Cannot converted to and from the same currency.", Toast.LENGTH_LONG).show();
+            double amountEntered = Double.parseDouble(tv.getText().toString());
+
+            // Retrieving the currencies selected
+            String from = sp1.getSelectedItem().toString();
+            String to = sp2.getSelectedItem().toString();
+
+
+
+            // Checking for different scenarios and applying the correct protocol for each
+            if (from.equals("USD") && to.equals("LBP")){
+                converted = amountEntered * usdValue;
+                DecimalFormat df = new DecimalFormat("#.###");
+                double roundedConversion = Double.valueOf(df.format(converted));
+                result.setText(roundedConversion + " LBP");
+            }
+            else if (from.equals("LBP") && to.equals("USD")){
+                converted = amountEntered / usdValue;
+                DecimalFormat df = new DecimalFormat("#.###");
+                double roundedConversion = Double.valueOf(df.format(converted));
+                result.setText(roundedConversion + " USD");
+            }
+            else {
+                Toast.makeText(getApplicationContext(), "Cannot converted to and from the same currency.", Toast.LENGTH_LONG).show();
+            }
         }
+
 
     }
 }

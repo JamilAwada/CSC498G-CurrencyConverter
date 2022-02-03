@@ -93,20 +93,20 @@
 
     <EditText
         android:id="@+id/pt_amount"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/amount"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintHorizontal_bias="0.929"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349"
-        tools:ignore="TextContrastCheck"
-        android:importantForAutofill="no" />
+        app:layout_constraintVertical_bias="0.346"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/tv_convertto"
@@ -116,10 +116,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintHorizontal_bias="0.182"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.548" />
+        app:layout_constraintVertical_bias="0.55" />
 
     <Button
         android:id="@+id/btn_convert"
@@ -169,10 +169,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="false"
+        android:editable="false"
         android:ems="10"
-        android:enabled="false"
         android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:importantForAutofill="no"
         android:inputType="number"
+        android:linksClickable="false"
+        android:longClickable="false"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -180,11 +184,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.844"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/img_lbp"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:contentDescription="@string/icon_of_the_lebanese_pound"
@@ -197,7 +200,7 @@
         app:srcCompat="@drawable/lbp" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/img_usd"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:contentDescription="@string/icon_of_the_u_s_dollar"
