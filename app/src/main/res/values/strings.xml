@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Currency Converter</string>
+
+    // This string array stores the currencies used in the spinners
+    <string-array name="currencies">
+        <item>USD</item>
+        <item>LBP</item>
+    </string-array>
 </resources>
